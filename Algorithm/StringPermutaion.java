@@ -4,10 +4,8 @@ Recursion method. Check if the arrays returned by two string functions are equal
  */
 
 package org.example.Algorithm;
-
 import java.util.ArrayList;
 import java.util.List;
-
 public class StringPermutaion {
     public static void main(String[] args) {
         String st="abc";
@@ -15,16 +13,19 @@ public class StringPermutaion {
         System.out.println(RecRes);
         ArrayList<String> IterRes=iterativePermutation(st);
         System.out.println(IterRes);
-
         // comparing both arraylist
         System.out.println(IterRes.equals(RecRes));
     }
+    /*
+    @desc: compute the possible permutation of string recursively
+    @params: string st, starting index, ending index
+    @return: Arraylist of String which contain the permutations of string
+     */
     public static ArrayList<String> recPermutation(String st,int l,int r){
       ArrayList<String> result= new ArrayList<>();
       if(l==r) {
           result.add(st);
           return result;
-
       }
       else{
           for(int i=l;i<=r;i++){
@@ -37,7 +38,11 @@ public class StringPermutaion {
       }
       return result;
     }
-
+    /*
+    @desc: compute the possible permutations of string iteratively
+    @params: string st
+    @return: ArrayList of String which contains the possible permutations of string
+     */
     public static  ArrayList<String> iterativePermutation(String str){
         ArrayList<String> result= new ArrayList<>();
         result.add("");
