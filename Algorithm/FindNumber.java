@@ -10,6 +10,12 @@ d. O/P -> Print the intermediary number and the final answer
 package org.example.Algorithm;
 import java.util.Scanner;
 public class FindNumber {
+    /*
+    @desc: guess the number by repeatedly applying binary search for finding the range
+           in which the guess number lies according to the user input
+    @params: starting element and ending element of range and user input
+    @return: int guess number
+     */
     int  guessNumber(int low,int high,Scanner scanner){
         if(low==high) return low;
         if(low>high) return -1;

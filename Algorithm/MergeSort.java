@@ -9,6 +9,11 @@ result.
  */
 package org.example.Algorithm;
 public class MergeSort {
+    /*
+    @desc:Merge sort algorithm on String by dividing arr in two half and calling
+          half recursively and then merging both half in place
+    @params: Array of String , starting index, ending index
+     */
     public void mergesort(String arr[], int l, int r) {
         if(r-l<=1) return;
         if(l<r) {
@@ -21,6 +26,10 @@ public class MergeSort {
             merge(arr, l, mid, r);
         }
     }
+    /*
+    @desc:sort the given interval size of array in increasing order
+    @params: Array of String , Starting index, Mid index, Ending index
+     */
     public void merge(String arr[], int l, int mid, int r) {
         // first half arr
         int n1 = mid - l + 1;
@@ -33,11 +42,9 @@ public class MergeSort {
         for (int i = 0; i < n1; i++) {
             temp1[i] = arr[l + i];
         }
-
         for (int i = 0; i < n2; i++) {
             temp2[i] = arr[mid + 1 + i];
         }
-
         int i = 0, j = 0;
         while (i < n1 && j < n2) {
             if ((temp2[j].compareTo(temp1[i]))>=0 ) {

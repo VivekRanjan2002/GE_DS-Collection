@@ -14,7 +14,6 @@ import java.util.Arrays;
 public class BinarySearch {
     public static void main(String[] args){
         File file= new File("C:\\Users\\91810\\IdeaProjects\\DS-Collections\\src\\main\\java\\org\\example\\Algorithm\\BinarySearch\\words.txt");
-
         // creating BufferedReader object
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -36,13 +35,17 @@ public class BinarySearch {
             System.out.println("Index of kiwi is: "+binarySearch(arr,"kiwi"));    // 5
             System.out.println("Index of banana is: "+binarySearch(arr,"banana"));  // 3
             System.out.println("Index of Flower is: "+binarySearch(arr,"Flower"));  //-1
-
         }
         catch(Exception e){
             System.out.println("File not Found");
         }
     }
-
+    /*
+    @desc: binary search on words by repeatedly deciding the search interval size according
+           to the comparison of target string with String at mid index
+    @params: Array of String, Target String
+    @return: int as index of target word if found else -1
+     */
     public static int binarySearch(String[] words,String target){
         int left=0,right= words.length-1;
         while(left<=right){

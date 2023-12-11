@@ -9,7 +9,12 @@ import java.util.Arrays;
 import java.util.Hashtable;
 
 public class Anagram {
-
+    /*
+    @desc: check if two strings are anagram or not  by sorting both arrays of char
+            and comparing it
+    @params: two Strings
+    @return: boolean value if anagram then true else false
+     */
     boolean checker(String str1, String str2) {
         char[] temp1 = str1.toCharArray();
         char[] temp2 = str2.toCharArray();

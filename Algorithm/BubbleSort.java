@@ -13,6 +13,12 @@ public class BubbleSort {
         for(String st:arr) System.out.print(st+" ");
         //output: Peach, Pear, apple, banana, grape, kiwi, mango, orange, pineapple, strawberry
     }
+    /*
+    @desc: Bubble sort algorithm by repeatedly swapping element with right neighbour
+           element if greater in place in such a way that in each round corresponding
+           max element find its correct position
+     @params: Array of String
+     */
     public static String[] bubbleSort(String[] arr) {
         for (int i = 0; i < arr.length - 1; i++) { // loop for arr.length round
             // swapping adjacent pair in each round

@@ -6,6 +6,12 @@ d. O/P -> Print the Sorted List
  */
 package org.example.Algorithm;
 public class InsertionSort {
+    /*
+    @desc: Insertion sort algorithm on array by Repeatedly take an element
+           from the unsorted part of the array and insert it into its correct position
+          within the sorted part by shifting larger elements one position to the right
+     @params: Array of String
+     */
     void insertionSort(String[] arr) {
         for (int i = 1; i < arr.length; i++) {
             String key = arr[i];
@@ -16,7 +22,6 @@ public class InsertionSort {
             }
             arr[j + 1] = key;
         }
-
     }
     public static void main(String[] args) {
         InsertionSort obj = new InsertionSort();

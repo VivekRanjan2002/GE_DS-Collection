@@ -13,9 +13,11 @@ iii. replace any occurance of mobile number that should be in format
 iv. replace any date in the format XX/XX/XXXX by current date.
  */
 package org.example.Algorithm;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class MessageReplacer {
@@ -47,6 +49,10 @@ public class MessageReplacer {
         System.out.println(message);
 
     }
+    /*
+    @desc: compute the current date in the format of DD/MM/YYY
+    @return: current date in required format as String
+     */
     public  static String CurrentDate(){
         LocalDate currdate= LocalDate.now();
         DateTimeFormatter formatter= DateTimeFormatter.ofPattern("dd/MM/YYYY");
