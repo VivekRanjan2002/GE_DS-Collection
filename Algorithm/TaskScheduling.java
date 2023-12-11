@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
+// Task class with deadline and duration as static variable
 class Task{
     public  int deadline;
     public int duration;
@@ -20,6 +21,12 @@ class Task{
     }
 }
 public class TaskScheduling {
+    /*
+    @desc: compute the minimum overshoot time by sorting tasks array on the basis of
+           deadline and then by iterating tasks and compute the overshoot time accordingly
+    @params: array of Task objects
+    @return: int type minimum overshoot time
+     */
      public static int minimiseOvershoot(Task[] tasks){
           Arrays.sort(tasks, Comparator.comparingInt(t->t.deadline));
           int currentTime=0;
